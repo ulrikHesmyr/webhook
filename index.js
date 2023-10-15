@@ -10,8 +10,7 @@ app.use(cookieParser());
 
 app.get('/:data', (req, res)=>{
     const {data} = req.params;    
-    console.log("Data: ", data);
-    console.log("Cookies: ", req.cookies);
+    console.log("Cookies: ", data);
     if(req.headers.referer) console.log("Origin: ", req.headers.referer);
     return res.status(200).send("");
 })
