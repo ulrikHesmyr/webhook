@@ -15,6 +15,14 @@ app.get('/:data', (req, res)=>{
     return res.status(200).send("");  
 })
 
+app.get("/", (req, res)=>{
+    console.log("Headers: ", req.headers);
+    console.log("Body: ", req.body);
+    console.log("Cookie: ", req.cookies);
+    console.log("Origin: ", req.originalUrl);
+    
+})
+
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
 })
